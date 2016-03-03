@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+<title>抽奖</title>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/duang.js"></script>
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/duang.css">
+</head>
+<body>
+<div class="duang">
+	<ul>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">300点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">100点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">200点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">500点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">谢谢参与</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">400点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">300点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">200点</div>
+					</div>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="item">
+				<div class="quickFlip">
+					<div class="list flip out">
+						<div class="back-ui"></div>
+					</div>				
+					<div  class="list flip">
+						<div class="show-ui">100点</div>
+					</div>					
+				</div>
+			</div>
+		</li>	
+	</ul>
+</div>
+<button class="start">开始</button>
+<button class="reset">重置</button>
+ <script type="text/javascript">
+ 	$(function(){	
+ 		var d = duang('.duang');
+ 		$('.start').click(function(){	
+ 			var lock = false;
+ 			d.resetDuang();	
+ 			d.flipAll();	
+ 				
+ 			$('.item').click(function(){
+				if(lock) return false;
+				lock = true;
+	 			var i = $(this).index();
+	 			i--;		
+	 			d.flipOne(i); 					
+	 		});		
+ 		});
+ 				
+		$('.reset').click(function(){
+			d.resetDuang();		
+		});
+ 	});
+ </script>
+</body>
+</html>

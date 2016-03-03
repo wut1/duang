@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-03-20 10:03:28
+ * @version $Id$
+ */
+body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.duang {
+		width: 98%;
+		overflow: hidden;
+		margin: 0 auto;
+		color: #000;
+		background: #989798;
+	}
+	.duang ul {
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+
+	.duang li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		background-color: gray;
+		width: 100px;
+		height: 166px;
+		margin: 10px;
+		float: left;
+	}
+	.duang .item {
+		z-index : 9999;
+		position : absolute;
+	}
+	.quickFlip {
+	    height: 100%; /*高度*/
+	    width: 100%;	/*宽度*/
+		margin:0 auto; /*可有可无，这里是为了居中而设定*/
+		position: relative;
+	}
+
+	.item.shadow{
+		 transition:border linear .2s,box-shadow linear .5s;
+		 -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
+		 -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+		 outline:none;border-color:rgba(241,39,242,.75);
+		 box-shadow:0 0 8px rgba(241,39,232,.5);
+		 -moz-box-shadow:0 0 8px rgba(241,39,232,.5);
+		 -webkit-box-shadow:0 0 10px #fff;
+	}
+	.quickFlip a {
+		color: #fff;
+	}
+	.quickFlip .back-ui {
+		width: 100%;
+		height: 100%;
+		background: url(../images/puke.jpg) no-repeat;
+		background-size: 100% 100%;
+	}
+	.quickFlip .show-ui {
+		width: 100%;
+		height: 100%;
+		background: #186ed8;
+		line-height: 166px;
+		text-align: center;
+		color: #fff;
+	}
+	
+	.quickFlip div {
+		color: #fff;
+		width: 100%;
+		height:100%;
+		position: absolute;
+		-webkit-transition: all 300ms ease-out; /* CSS3 transition. Last value is pause before transition play */
+            -moz-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+	}
+
+	.quickFlip div.trans {
+		-webkit-transform: rotateY(180deg); /* flip horizontally 180deg*/
+            -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            -webkit-transition-delay: 0.2s;
+            -moz-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+	}
